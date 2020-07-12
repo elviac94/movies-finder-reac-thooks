@@ -4,7 +4,7 @@ import styles from './style';
 import { MovieIcon } from '../../icons';
 
 export default ({ history }) =>{
-    console.log(history)
+    // console.log(history)
     const [searchText, setSearchText] = useState('');
     const classes = styles()
     const handleSearchTextChange = event =>{

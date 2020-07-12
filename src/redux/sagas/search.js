@@ -3,7 +3,7 @@ import { SEARCH_MOVIE_START, SEARCH_MOVIE_ERROR, SEARCH_MOVIE_COMPLETE } from '.
 
 import { apiCall } from '../api'
 
-export function* searchMovie({payload}){
+export function* searchMovie({ payload }){
     try{
         const results = yield call(apiCall, `&s=${payload.movieName}`, null, null, 'GET');
         yield put({ type: SEARCH_MOVIE_COMPLETE, results });
