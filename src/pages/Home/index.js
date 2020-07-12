@@ -3,7 +3,8 @@ import { Container, Typography, Card, Grid, TextField, Button } from '@material-
 import styles from './style';
 import { MovieIcon } from '../../icons';
 
-export default () =>{
+export default ({ history }) =>{
+    console.log(history)
     const [searchText, setSearchText] = useState('');
     const classes = styles()
     const handleSearchTextChange = event =>{
@@ -11,11 +12,11 @@ export default () =>{
     };
 
     const handleCleanTextClick = event =>{
-        console.log(10)
+        setSearchText('')
     };
 
     const handleSearchTextClick = event =>{
-        console.log(10)
+        history.push(`/results?movieName=${searchText}`)
     };
     
     return(
