@@ -10,7 +10,7 @@ export default function(state= initialState, action){
             break;
         
         case SEARCH_MOVIE_ERROR:
-            return {...state, isLoading:false, movies:null };
+            return {...state, isLoading:false, movieResults:null };
             break;
         
         case SEARCH_MOVIE_COMPLETE:
@@ -26,7 +26,6 @@ export default function(state= initialState, action){
             break;
             
         case SEARCH_MOVIE_BY_ID_COMPLETE:
-            console.log(action)
             return {...state, isLoading:false, movieResult: action.movie.data};
             break;
         default:
